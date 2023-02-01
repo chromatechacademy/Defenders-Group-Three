@@ -1,4 +1,5 @@
 package com.chroma.appsCommon;
+import com.chroma.pages.LoginPage;
 import com.chroma.pages.SamplePage;
 import com.chroma.web.WebDriverUtils;
 
@@ -12,6 +13,13 @@ public class PageInitializer extends WebDriverUtils {
 
         samplePage = new SamplePage();
 
+    }
+    
+    public static LoginPage loginPage;
+
+    public static void initializePages() {
+        
+        loginPage = new LoginPage();
     }
 
 }
