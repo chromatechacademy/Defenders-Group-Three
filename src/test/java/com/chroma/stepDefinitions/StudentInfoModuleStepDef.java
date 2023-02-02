@@ -1,6 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
+import com.chroma.pages.DashboardPage;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -21,7 +22,7 @@ public class StudentInfoModuleStepDef extends PageInitializer {
 
     @And("user clicks the student information dropdown on dashboard page {string}")
     public void user_clicks_the_student_information_dropdown_on_dashboard_page(String string) {
-
+        DashboardPage.studentInformationModule.click();
     }
 
     @Then("The following modules should be displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}")
