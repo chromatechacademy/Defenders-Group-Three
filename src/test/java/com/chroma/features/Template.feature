@@ -12,13 +12,10 @@ Feature: Title of your feature
     Then I validate the outcomes
     And check more outcomes
 
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+  @studentinformation
+Scenario: Inspection Of Student Information Module Links
+Given a user is on the login page "https://mexil.it/chroma_tech_academy/test/site/login"
+When user logs in with valid credentials username "general@teacher.com" and password "123456"
+And user clicks the student information dropdown 
+Then The following modules should be displayed "Student Details", "Student Admission", "Disabled Students", "Bulk Delete", "Student Catagories", "Student House", "Disable Reason"
 
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
