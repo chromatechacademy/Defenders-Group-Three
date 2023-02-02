@@ -1,10 +1,24 @@
 @tag
-Feature: Student Information Module
+Feature: Title of your feature
+  I want to use this template for my feature file
 
-@studentinformation
-Scenario: Inspection Of Student Information Module Links
-Given a user is on the login page "https://mexil.it/chroma_tech_academy/test/site/login"
-When user logs in with valid credentials username "general@teacher.com" and password "123456"
-And user clicks the student information dropdown on dashboard page "https://mexil.it/chroma_tech_academy/test/admin/admin/dashboard"
-Then The following modules should be displayed "Student Details", "Student Admission", "Disabled Students", "Bulk Delete", "Student Catagories", "Student House", "Disable Reason"
+  @tag1
+  Scenario: Title of your scenario
+    Given I want to write a step with precondition
+    And some other precondition
+    When I complete action
+    And some other action
+    And yet another action
+    Then I validate the outcomes
+    And check more outcomes
 
+  @tag2
+  Scenario Outline: Title of your scenario outline
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

@@ -11,11 +11,11 @@ public class StudentInformationPage {
 
      /* STUDENT DETAILS MODULE */
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']//a[normalize-space()='Student Details']") 
-    public WebElement studentDetailsModule;
+    public static WebElement studentDetailsModule;
 
     /* STUDENT ADMISSION MODULE */
     @FindBy(xpath = "//a[normalize-space()='Student Admission']")
-    public WebElement studentAdmissionModule;
+    public static WebElement studentAdmissionModule;
 
     /* DISABLED STUDENTS */
     @FindBy(xpath = "//a[normalize-space()='Disabled Students']")

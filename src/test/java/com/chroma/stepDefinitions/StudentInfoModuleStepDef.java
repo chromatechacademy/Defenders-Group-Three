@@ -1,7 +1,12 @@
 package com.chroma.stepDefinitions;
 
+import org.testng.Assert;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
+import com.chroma.pages.LoginPage;
+import com.chroma.pages.StudentInformationPage;
+import com.chroma.web.WebDriverUtils;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -10,13 +15,23 @@ import cucumber.api.java.en.When;
 
 public class StudentInfoModuleStepDef extends PageInitializer {
 
+    DashboardPage dashboardPage = new DashboardPage();
+    StudentInformationPage studentInformationPage = new StudentInformationPage();
+    LoginPage loginPage = new LoginPage();
+
+    // Placeholder
     @Given("a user is on the login page {string}")
-    public void a_user_is_on_the_login_page(String string) {
+    public void a_user_is_on_the_login_page(String url) {
+        WebDriverUtils.driver.get(url);
 
     }
 
+    // Placeholder
     @When("user logs in with valid credentials username {string} and password {string}")
-    public void user_logs_in_with_valid_credentials_username_and_password(String string, String string2) {
+    public void user_logs_in_with_valid_credentials_username_and_password(String username, String password) {
+        loginPage.usernameTextBox.sendKeys(username);
+        loginPage.passwordTextBox.sendKeys(password);
+        loginPage.signInButton.click();
 
     }
 
@@ -26,9 +41,18 @@ public class StudentInfoModuleStepDef extends PageInitializer {
     }
 
     @Then("The following modules should be displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}")
-    public void the_following_modules_should_be_displayed(String string, String string2, String string3, String string4,
-            String string5, String string6, String string7) {
+    public void the_following_modules_should_be_displayed(String studentDetails, String studentAdmission,
+            String disabledStudents, String bulkDelete,
+            String studentCatagories, String studentHouse, String disableReason) {
 
+        String actualStudentDetailsText = StudentInformationPage.studentDetailsModule.getText();
+        System.out.println(actualStudentDetailsText);
+
+        String actualstudentAdmissionText = StudentInformationPage.studentAdmissionModule.getText();
+        System.out.println(actualstudentAdmissionText);
+
+        Assert.assertEquals(actualStudentDetailsText, studentDetails);
+        Assert.assertEquals(actualstudentAdmissionText, studentAdmission);
     }
 
 }
