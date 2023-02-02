@@ -5,6 +5,7 @@ import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
+import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 
@@ -60,5 +61,7 @@ public class NavigationModulesStepDef extends PageInitializer{
     public void reports_Module_with_the_text_is_displayed(String expectedReportsModuleText) {
         CommonUtils.isElementDisplayed(DashboardPage.reportsModule);
         CommonUtils.assertEquals(DashboardPage.reportsModule.getText(), expectedReportsModuleText);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 }
