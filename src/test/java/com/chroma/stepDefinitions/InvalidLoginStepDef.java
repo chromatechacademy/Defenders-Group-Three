@@ -12,7 +12,7 @@ import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class StepDef extends PageInitializer {
+public class InvalidLoginStepDef extends PageInitializer {
 
     LoginPage loginPage = new LoginPage();
 
@@ -25,7 +25,7 @@ public class StepDef extends PageInitializer {
 
     @Then("user enters invalid Username {string} and Password {string}")
     public void user_enters_invalid_Username_and_Password(String username, String password) {
-        loginPage.userNameTextBox.sendKeys(username);
+        loginPage.usernameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
     }
 
@@ -45,5 +45,4 @@ public class StepDef extends PageInitializer {
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    
 }
