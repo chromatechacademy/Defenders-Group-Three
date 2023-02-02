@@ -2,6 +2,7 @@ package com.chroma.stepDefinitions;
 
 import org.testng.Assert;
 
+import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.web.CommonUtils;
@@ -10,9 +11,8 @@ import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class NavigationModulesStepDef {
-    DashboardPage dashboardPage = new DashboardPage();
-
+public class NavigationModulesStepDef extends PageInitializer{
+  
     @Then("Student Information Module with the text {string} is displayed")
     public void student_Information_Module_with_the_text_is_displayed(String expectedStudentInformationModuleText) {
         CommonUtils.isElementDisplayed(DashboardPage.studentInformationModule);
