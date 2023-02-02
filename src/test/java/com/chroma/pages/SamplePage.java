@@ -11,7 +11,7 @@ public class SamplePage {
 
     // Store page elements using @FindBy
 
-    @FindBy(xpath = "//a[normalize-space()='Student Admission']")
+    @FindBy(xpath = "")
     public WebElement sampleElement;
 
     // Use a constructor to initialize all page elements, else you will get a
