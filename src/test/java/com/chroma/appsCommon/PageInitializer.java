@@ -22,4 +22,5 @@ public class PageInitializer extends WebDriverUtils {
         loginPage = new LoginPage();
     }
 
+    
 }

@@ -1,7 +1,7 @@
 Feature: Login functionality
    User will be able to log in to the website using credentials.
 
-  @smoke
+  @Smoke
   Scenario Outline: Login with invalid credentials
     Given a user navigate to the login page "https://mexil.it/chroma_tech_academy/test/site/login"
     Then user enters invalid Username "<username>" and Password "<password>"

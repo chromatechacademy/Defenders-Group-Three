@@ -28,6 +28,5 @@ public class LoginPage {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 
-
 }
 
