@@ -1,5 +1,7 @@
 package com.chroma.stepDefinitions;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import org.testng.Assert;
 
 import com.chroma.appsCommon.PageInitializer;
@@ -43,7 +45,7 @@ public class StudentInfoModuleStepDef extends PageInitializer {
     @Then("The following modules should be displayed {string}, {string}, {string}, {string}, {string}, {string}, {string}")
     public void the_following_modules_should_be_displayed(String studentDetails, String studentAdmission,
             String disabledStudents, String bulkDelete,
-            String studentCatagories, String studentHouse, String disableReason) {
+            String studentCategories, String studentHouse, String disableReason) {
 
         String actualStudentDetailsText = StudentInformationPage.studentDetailsModule.getText();
         System.out.println(actualStudentDetailsText);
@@ -51,8 +53,29 @@ public class StudentInfoModuleStepDef extends PageInitializer {
         String actualstudentAdmissionText = StudentInformationPage.studentAdmissionModule.getText();
         System.out.println(actualstudentAdmissionText);
 
+        String actualBulkDeteText = StudentInformationPage.bulkDeleteModule.getText();
+        System.out.println(actualBulkDeteText);
+
+        String actualStudentCategoriesText = StudentInformationPage.studentCategoriesModule.getText();
+        System.out.println(actualStudentCategoriesText);
+
+        String actualStudentHouseText = StudentInformationPage.studentHouseModule.getText();
+        System.out.println(actualStudentHouseText);
+
+        String actualDisableReasonText = StudentInformationPage.disableReasonModule.getText();
+        System.out.println(actualDisableReasonText);
+
         Assert.assertEquals(actualStudentDetailsText, studentDetails);
         Assert.assertEquals(actualstudentAdmissionText, studentAdmission);
+        Assert.assertEquals(actualBulkDeteText, bulkDelete);
+        Assert.assertEquals(actualStudentCategoriesText, studentCategories);
+        Assert.assertEquals(actualStudentHouseText, studentHouse);
+        Assert.assertEquals(actualDisableReasonText, disableReason);
+        
+    
+
+
+        System.out.println("I MADE IT THROUGH JAVA CLASS!");
     }
 
 }

@@ -2,15 +2,18 @@ package com.chroma.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.chroma.web.WebDriverUtils;
 
 public class StudentInformationPage {
-    
+
     /*
-     * Student Information Page 
+     * Student Information Page
      */
 
-     /* STUDENT DETAILS MODULE */
-    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']//a[normalize-space()='Student Details']") 
+    /* STUDENT DETAILS MODULE */
+    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']//a[normalize-space()='Student Details']")
     public static WebElement studentDetailsModule;
 
     /* STUDENT ADMISSION MODULE */
@@ -19,23 +22,26 @@ public class StudentInformationPage {
 
     /* DISABLED STUDENTS */
     @FindBy(xpath = "//a[normalize-space()='Disabled Students']")
-    public WebElement disabledStudentsModule;
+    public static WebElement disabledStudentsModule;
 
     /* BULK DELETE */
     @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
-    public WebElement bulkDeleteModule;
+    public static WebElement bulkDeleteModule;
 
     /* STUDENT CATEGORIES MODULE */
-    @FindBy(xpath = "//span[contains(text(),'Human Resource')]")
-    public WebElement studentCategoriesModule;
+    @FindBy(xpath = "//a[normalize-space()='Student Categories']") 
+    public static WebElement studentCategoriesModule;
 
     /* STUDENT HOUSE MODULE */
     @FindBy(xpath = "//a[normalize-space()='Student House']")
-    public WebElement studentHouseModule;
+    public static WebElement studentHouseModule;
 
     /* DISABLE REASON MODULE */
     @FindBy(xpath = "//a[normalize-space()='Disable Reason']")
-    public WebElement disableReasonModule;
+    public static WebElement disableReasonModule;
 
+    public StudentInformationPage() {
+        PageFactory.initElements(WebDriverUtils.driver, this);
 
+    }
 }
