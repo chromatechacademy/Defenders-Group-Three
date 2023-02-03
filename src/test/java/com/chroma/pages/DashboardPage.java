@@ -1,12 +1,9 @@
 package com.chroma.pages;
-
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 public class DashboardPage {
@@ -18,6 +15,42 @@ public class DashboardPage {
     /* fees collection module */
     @FindBy(xpath = "//span[contains(text(), 'Fees Collection')]")
     public static WebElement feesCollectionModule;
+
+    /* collect fees submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Collect Fees')]")
+    public static WebElement collectFeesSubmodule;
+
+    /* search fees payment submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Search Fees Payment')]")
+    public static WebElement searchFeesPaymentSubmodule;
+
+    /* search due fees submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Search Due Fees')]")
+    public static WebElement searchDueFeesSubmodule;
+
+    /* fees master submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Master')]")
+    public static WebElement feesMasterSubmodule;
+
+    /* fees group submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Group')]")
+    public static WebElement feesGroupSubmodule;
+
+    /* fees type submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Type')]")
+    public static WebElement feesTypeSubmodule;
+
+    /* fees discount submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Discount')]")
+    public static WebElement feesDiscountSubmodule;
+
+    /* fees carry forward submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Carry Forward')]")
+    public static WebElement feesCarryForwardSubmodule;
+
+    /* fees reminder submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Reminder')]")
+    public static WebElement feesReminderSubmodule;
 
     /* income module */
     @FindBy(xpath = "//span[contains(text(), 'Income')]")
