@@ -38,7 +38,7 @@ public class StudentInfoModuleStepDef extends PageInitializer {
     }
 
     @And("user clicks the student information dropdown on dashboard page {string}")
-    public void user_clicks_the_student_information_dropdown_on_dashboard_page(String string) {
+    public void user_clicks_the_student_information_dropdown_on_dashboard_page(String studentInformation) {
         DashboardPage.studentInformationModule.click();
     }
 
