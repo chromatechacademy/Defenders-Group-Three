@@ -7,34 +7,76 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class DashboardPage {
-    
-    /* INCOME MODULE HEADER */ 
-    @FindBy(xpath= "//span[normalize-space()='Income']")
-    public WebElement incomeModule;
 
-    /* ADD INCOME SUBMODULE TEXT */
-    @FindBy(xpath = "//a[contains(text(),'Add Income')]")
-    public WebElement addIncomeSubModule; 
+    /* Student info module */
+    @FindBy(xpath = "//span[contains(text(), 'Student Information')]")
+    public static WebElement studentInformationModule;
 
-    /* SEARCH INCOME SUBMODULE TEXT */
-    @FindBy(xpath = "//a[contains(text(),'Search Income')]")
-    public WebElement searchIncomeSubModule;
+    /* fees collection module */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Collection')]")
+    public static WebElement feesCollectionModule;
 
-    /* INCOME HEAD SUBMODULE TEXT */
-    @FindBy(xpath = "//a[contains(text(),'Income Head')]")
-    public WebElement incomeHeadSubModule;
+    /* collect fees submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Collect Fees')]")
+    public static WebElement collectFeesSubmodule;
 
+    /* search fees payment submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Search Fees Payment')]")
+    public static WebElement searchFeesPaymentSubmodule;
 
-    
-    
-    
-    
-    
-    
-    
-    
-    public DashboardPage(){
+    /* search due fees submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Search Due Fees')]")
+    public static WebElement searchDueFeesSubmodule;
+
+    /* fees master submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Master')]")
+    public static WebElement feesMasterSubmodule;
+
+    /* fees group submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Group')]")
+    public static WebElement feesGroupSubmodule;
+
+    /* fees type submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Type')]")
+    public static WebElement feesTypeSubmodule;
+
+    /* fees discount submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Discount')]")
+    public static WebElement feesDiscountSubmodule;
+
+    /* fees carry forward submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Carry Forward')]")
+    public static WebElement feesCarryForwardSubmodule;
+
+    /* fees reminder submodule */
+    @FindBy(xpath = "//span[contains(text(), 'Fees Reminder')]")
+    public static WebElement feesReminderSubmodule;
+
+    /* income module */
+    @FindBy(xpath = "//span[contains(text(), 'Income')]")
+    public static WebElement incomeModule;
+
+    /* expenses module */
+    @FindBy(xpath = "//span[contains(text(), 'Expenses')]")
+    public static WebElement expensesModule;
+
+    /* academics module */
+    @FindBy(xpath = "//span[contains(text(), 'Academics')]")
+    public static WebElement academicsModule;
+
+    /* HR module */
+    @FindBy(xpath = "//span[contains(text(), 'Human Resource')]")
+    public static WebElement humanResourceModule;
+
+    /* hw module */
+    @FindBy(xpath = "//span[contains(text(), 'Homework')]")
+    public static WebElement homeworkModule;
+
+    /* reports module */
+    @FindBy(xpath = "//span[contains(text(), 'Reports')]")
+    public static WebElement reportsModule;
+
+    public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-    
 }

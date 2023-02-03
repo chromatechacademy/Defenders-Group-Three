@@ -14,7 +14,6 @@ public class LoginStepDefinitions extends PageInitializer {
     @Given("a Chroma Tech Academy teacher or admin is on login page {string}")
     public void a_Chroma_Tech_Academy_teacher_or_admin_is_on_login_page(String url) {
         WebDriverUtils.driver.get(url);
-
     }
 
     @When("user logs in with valid credentials username {string} and password {string}")
@@ -31,7 +30,6 @@ public class LoginStepDefinitions extends PageInitializer {
     public void user_is_on_dashboard_page(String url) {
         String actualHomePage = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePage, url);
-        
     }
 
 }
