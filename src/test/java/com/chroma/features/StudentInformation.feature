@@ -1,7 +1,6 @@
-@tag
 Feature: Student Information Module
 
-@studentinformation
+@CTSMSREGRESSION @CHRIS @USID-4
 Scenario: Inspection Of Student Information Module Links
 Given a user is on the login page "https://mexil.it/chroma_tech_academy/dev/site/login"
 When user logs in with valid credentials username "general@teacher.com" and password "123456"

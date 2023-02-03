@@ -1,15 +1,11 @@
 package com.chroma.stepDefinitions;
 
-import static org.junit.Assert.assertArrayEquals;
-
 import org.testng.Assert;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.StudentInformationPage;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -71,9 +67,6 @@ public class StudentInfoModuleStepDef extends PageInitializer {
         Assert.assertEquals(actualStudentCategoriesText, studentCategories);
         Assert.assertEquals(actualStudentHouseText, studentHouse);
         Assert.assertEquals(actualDisableReasonText, disableReason);
-        
-    
-
 
         System.out.println("I MADE IT THROUGH JAVA CLASS!");
     }

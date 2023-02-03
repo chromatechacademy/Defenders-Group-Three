@@ -1,11 +1,9 @@
 package com.chroma.stepDefinitions;
 
 import org.testng.Assert;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.LoginPage;
 import com.chroma.web.WebDriverUtils;
-
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
