@@ -1,5 +1,6 @@
 package com.chroma.stepDefinitions;
 
+import com.chroma.pages.HomeworkPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.web.WebDriverUtils;
 
@@ -10,7 +11,7 @@ import cucumber.api.java.en.When;
 public class HomeworkModule {
 
     LoginPage loginPage = new LoginPage();
-    
+    HomeworkPage homeworkPage = new HomeworkPage();
 
     // Placeholder
     @Given("a user is on the login page {string}")
@@ -29,13 +30,13 @@ public class HomeworkModule {
     }
 
     @When("user clicks the homework dropdown on dashboard page {string}")
-    public void user_clicks_the_homework_dropdown_on_dashboard_page(String string) {
-        
+    public void user_clicks_the_homework_dropdown_on_dashboard_page(String homeworkDropdown) {
+
     }
 
     @Then("The following modules should be displayed {string}")
     public void the_following_modules_should_be_displayed(String string) {
-      
+
     }
 
 }
