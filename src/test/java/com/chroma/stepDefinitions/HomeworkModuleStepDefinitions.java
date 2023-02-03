@@ -1,6 +1,5 @@
 package com.chroma.stepDefinitions;
 
-import org.testng.Assert;
 import com.chroma.pages.HomeworkPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.web.CommonUtils;
