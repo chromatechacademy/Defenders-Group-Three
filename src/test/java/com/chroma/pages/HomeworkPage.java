@@ -8,8 +8,11 @@ import com.chroma.web.WebDriverUtils;
 public class HomeworkPage {
 
      /* HOMEWORK PAGE */
-     @FindBy(xpath = "//span[normalize-space()='Homework']")
-     public static WebElement homeworkPage;
+     @FindBy(xpath = "//span[normalize-space()='Homework']") 
+     public static WebElement homeworkPageModule;
+
+     @FindBy(xpath = "//a[normalize-space()='Add Homework']") 
+     public static WebElement addHomeworkModule;
  
      public HomeworkPage() {
          PageFactory.initElements(WebDriverUtils.driver, this);

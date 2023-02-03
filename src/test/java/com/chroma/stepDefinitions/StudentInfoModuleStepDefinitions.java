@@ -1,17 +1,17 @@
 package com.chroma.stepDefinitions;
 
-import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.StudentInformationPage;
+import com.chroma.web.CommonUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class StudentInfoModuleStepDef extends PageInitializer {
+public class StudentInfoModuleStepDefinitions extends PageInitializer {
 
     DashboardPage dashboardPage = new DashboardPage();
     StudentInformationPage studentInformationPage = new StudentInformationPage();
@@ -44,29 +44,23 @@ public class StudentInfoModuleStepDef extends PageInitializer {
             String studentCategories, String studentHouse, String disableReason) {
 
         String actualStudentDetailsText = StudentInformationPage.studentDetailsModule.getText();
-        System.out.println(actualStudentDetailsText);
 
         String actualstudentAdmissionText = StudentInformationPage.studentAdmissionModule.getText();
-        System.out.println(actualstudentAdmissionText);
 
         String actualBulkDeteText = StudentInformationPage.bulkDeleteModule.getText();
-        System.out.println(actualBulkDeteText);
 
         String actualStudentCategoriesText = StudentInformationPage.studentCategoriesModule.getText();
-        System.out.println(actualStudentCategoriesText);
 
         String actualStudentHouseText = StudentInformationPage.studentHouseModule.getText();
-        System.out.println(actualStudentHouseText);
 
         String actualDisableReasonText = StudentInformationPage.disableReasonModule.getText();
-        System.out.println(actualDisableReasonText);
 
-        Assert.assertEquals(actualStudentDetailsText, studentDetails);
-        Assert.assertEquals(actualstudentAdmissionText, studentAdmission);
-        Assert.assertEquals(actualBulkDeteText, bulkDelete);
-        Assert.assertEquals(actualStudentCategoriesText, studentCategories);
-        Assert.assertEquals(actualStudentHouseText, studentHouse);
-        Assert.assertEquals(actualDisableReasonText, disableReason);
+        CommonUtils.assertEquals(actualStudentDetailsText, studentDetails);
+        CommonUtils.assertEquals(actualstudentAdmissionText, studentAdmission);
+        CommonUtils.assertEquals(actualBulkDeteText, bulkDelete);
+        CommonUtils.assertEquals(actualStudentCategoriesText, studentCategories);
+        CommonUtils.assertEquals(actualStudentHouseText, studentHouse);
+        CommonUtils.assertEquals(actualDisableReasonText, disableReason);
 
         System.out.println("I MADE IT THROUGH JAVA CLASS!");
     }
