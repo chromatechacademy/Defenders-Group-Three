@@ -1,15 +1,8 @@
 package com.chroma.stepDefinitions;
-
-import org.testng.Assert;
-
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.DashboardPage;
-import com.chroma.pages.LoginPage;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
-import com.chroma.web.WebDriverUtils;
-
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class NavigationModulesStepDef extends PageInitializer{
@@ -63,5 +56,6 @@ public class NavigationModulesStepDef extends PageInitializer{
         CommonUtils.assertEquals(DashboardPage.reportsModule.getText(), expectedReportsModuleText);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
+        CommonUtils.sleep(3000);
     }
 }
