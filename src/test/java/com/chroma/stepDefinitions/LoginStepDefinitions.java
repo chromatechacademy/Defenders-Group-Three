@@ -8,7 +8,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class SampleStepDefinitions extends PageInitializer {
+public class LoginStepDefinitions extends PageInitializer {
 
     LoginPage loginPage = new LoginPage();
 
@@ -20,7 +20,6 @@ public class SampleStepDefinitions extends PageInitializer {
     @When("user logs in with valid credentials username {string} and password {string}")
     public void user_logs_in_with_valid_credentials_username_and_password(String username, String password)
             throws InterruptedException {
-
         loginPage.usernameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signInButton.click();
@@ -32,5 +31,4 @@ public class SampleStepDefinitions extends PageInitializer {
         String actualHomePage = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePage, url);
     }
-
 }

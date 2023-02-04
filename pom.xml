@@ -115,12 +115,7 @@
 				<configuration>
 					<includes>
 						<include>
-							CTSMSSmokeRunner.java
-							CTSMSRegressionRunner.java
-							CTSMSProgressionRunner.java
-							RealEstateRegressionRunner.java
-							RealEstateProgressionRunner.java
-							RealEstateSmokeRunner.java
+							Runners.java
 						</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore> <!-- to get report even when fails -->
