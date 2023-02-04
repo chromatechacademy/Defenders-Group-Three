@@ -2,16 +2,13 @@ package com.chroma.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 public class SamplePage {
 
     // Store page elements using @FindBy
 
-    @FindBy(xpath = "")
     public WebElement sampleElement;
 
     // Use a constructor to initialize all page elements, else you will get a
