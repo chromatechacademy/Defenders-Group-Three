@@ -1,6 +1,5 @@
 package com.chroma.pages;
-import java.util.List;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,39 +16,39 @@ public class DashboardPage {
     public static WebElement feesCollectionModule;
 
     /* collect fees submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Collect Fees')]")
+    @FindBy(linkText = "Collect Fees")
     public static WebElement collectFeesSubmodule;
 
     /* search fees payment submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Search Fees Payment')]")
+    @FindBy(partialLinkText = "Search Fees Payme")
     public static WebElement searchFeesPaymentSubmodule;
 
     /* search due fees submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Search Due Fees')]")
+    @FindBy(partialLinkText = "Search Due Fe")
     public static WebElement searchDueFeesSubmodule;
 
     /* fees master submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Fees Master')]")
+    @FindBy(partialLinkText = "Fees Mast")
     public static WebElement feesMasterSubmodule;
 
     /* fees group submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Fees Group')]")
+    @FindBy(partialLinkText = "Fees Gro")
     public static WebElement feesGroupSubmodule;
 
     /* fees type submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Fees Type')]")
+    @FindBy(partialLinkText = "Fees Ty")
     public static WebElement feesTypeSubmodule;
 
     /* fees discount submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Fees Discount')]")
+    @FindBy(partialLinkText = "Fees Discou")
     public static WebElement feesDiscountSubmodule;
 
     /* fees carry forward submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Fees Carry Forward')]")
+    @FindBy(partialLinkText = "Fees Carry Forwa")
     public static WebElement feesCarryForwardSubmodule;
 
     /* fees reminder submodule */
-    @FindBy(xpath = "//span[contains(text(), 'Fees Reminder')]")
+    @FindBy(partialLinkText = "Fees Remind")
     public static WebElement feesReminderSubmodule;
 
     /* income module */
