@@ -1,4 +1,5 @@
 Feature: Income Module Scenarios
+
    @CTSMSRegression @Geraldine @DFNDRS-6
   Scenario: Income Module
     Given a Chroma Tech Academy teacher or admin is on login page "https://mexil.it/chroma_tech_academy/dev/site/login"
