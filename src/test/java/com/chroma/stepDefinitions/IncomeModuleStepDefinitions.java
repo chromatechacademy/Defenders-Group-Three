@@ -1,4 +1,5 @@
 package com.chroma.stepDefinitions;
+
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.CommonUtils;
@@ -20,14 +21,11 @@ public class IncomeModuleStepDefinitions extends PageInitializer{
 
         String actualAddIncomeText = incomeModulePage.addIncomeSubModule.getText();
         CommonUtils.assertEquals(expectedAddIncomeText, actualAddIncomeText);
-
         String actualSearchIncomeText = incomeModulePage.searchIncomeSubModule.getText();
         CommonUtils.assertEquals(expectedSearchIncomeText, actualSearchIncomeText);
-
         String actualIncomeHeadText = incomeModulePage.incomeHeadSubModule.getText();
         CommonUtils.assertEquals(expectedIncomeHeadText, actualIncomeHeadText);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
-
 }

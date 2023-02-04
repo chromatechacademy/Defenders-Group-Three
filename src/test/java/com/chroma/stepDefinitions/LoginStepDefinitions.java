@@ -1,4 +1,5 @@
 package com.chroma.stepDefinitions;
+
 import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
 import com.chroma.pages.LoginPage;
@@ -19,7 +20,6 @@ public class LoginStepDefinitions extends PageInitializer {
     @When("user logs in with valid credentials username {string} and password {string}")
     public void user_logs_in_with_valid_credentials_username_and_password(String username, String password)
             throws InterruptedException {
-
         loginPage.usernameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
         loginPage.signInButton.click();
@@ -31,5 +31,4 @@ public class LoginStepDefinitions extends PageInitializer {
         String actualHomePage = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePage, url);
     }
-
 }

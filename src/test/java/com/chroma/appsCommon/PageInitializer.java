@@ -8,19 +8,16 @@ import com.chroma.web.WebDriverUtils;
 
 public class PageInitializer extends WebDriverUtils {
     // Sample of instantiating an instance
-
     public static SamplePage samplePage;
     public static DashboardPage dashboardPage;
     public static IncomeModulePage incomeModulePage;
     public static DisableStudentPage disableStudentPage;
    
     public void initializeAllPages() {
-
         samplePage = new SamplePage();
         dashboardPage = new DashboardPage();
         incomeModulePage = new IncomeModulePage();
-        disableStudentPage = new DisableStudentPage();
-        
+        disableStudentPage = new DisableStudentPage(); 
     }
 }
 
