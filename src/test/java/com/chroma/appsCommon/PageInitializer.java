@@ -21,7 +21,6 @@ public class PageInitializer extends WebDriverUtils {
         realEstateLoginPage = new RealEstateLoginPage();
         incomeModulePage = new IncomeModulePage();
         studentAdmissionPage = new StudentAdmissionPage();
-
     }
 }
 
