@@ -35,7 +35,6 @@ public class RealEstateDashboardPage {
     @FindBy(xpath = "//span[normalize-space()='Projects']")
     public static WebElement projectsTab;
 
-    
         public RealEstateDashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
      }
