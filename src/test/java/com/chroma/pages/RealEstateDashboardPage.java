@@ -36,7 +36,7 @@ public class RealEstateDashboardPage {
     public static WebElement projectsTab;
 
     
-        ic RealEstateDashboardPage() {
+        public RealEstateDashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
      }
 }
