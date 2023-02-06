@@ -30,5 +30,4 @@ public class RealEstateProjectsPage {
     public RealEstateProjectsPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
-
 }

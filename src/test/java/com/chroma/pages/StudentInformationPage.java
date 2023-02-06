@@ -7,10 +7,6 @@ import com.chroma.web.WebDriverUtils;
 
 public class StudentInformationPage {
 
-    /*
-     * Student Information Page
-     */
-
     /* STUDENT DETAILS MODULE */
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']//a[normalize-space()='Student Details']")
     public static WebElement studentDetailsModule;
@@ -41,6 +37,5 @@ public class StudentInformationPage {
 
     public StudentInformationPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
-
     }
 }
