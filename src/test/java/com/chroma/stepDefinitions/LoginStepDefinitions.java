@@ -2,6 +2,7 @@ package com.chroma.stepDefinitions;
 
 import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
+import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -27,5 +28,7 @@ public class LoginStepDefinitions extends PageInitializer {
     public void user_is_on_dashboard_page(String url) {
         String actualHomePage = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePage, url);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 }
