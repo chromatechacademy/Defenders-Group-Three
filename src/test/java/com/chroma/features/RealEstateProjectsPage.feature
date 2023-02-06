@@ -1,6 +1,6 @@
 Feature: Projects Page Elements
 
-    @REProgression @CHRIS @USID-48
+    @RERegression @CHRIS @USID-48
     Scenario Outline: Verify Projects Page Elements
         Given an admin or student user is on login page "<URL>"
         When admin or student user logs in with valid credentials email "<EMAIL>" and password "<PASSWORD>"
