@@ -2,15 +2,13 @@ package com.chroma.stepDefinitions;
 
 import org.testng.Assert;
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.LoginPage;
+import com.chroma.utils.CucumberLogUtils;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginStepDefinitions extends PageInitializer {
-
-    LoginPage loginPage = new LoginPage();
 
     @Given("a Chroma Tech Academy teacher or admin is on login page {string}")
     public void a_Chroma_Tech_Academy_teacher_or_admin_is_on_login_page(String url) {
@@ -30,5 +28,7 @@ public class LoginStepDefinitions extends PageInitializer {
     public void user_is_on_dashboard_page(String url) {
         String actualHomePage = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePage, url);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 }
