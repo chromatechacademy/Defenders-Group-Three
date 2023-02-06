@@ -32,7 +32,7 @@ public class LoginStepDefinitions extends PageInitializer {
     public void user_is_on_dashboard_page(String url) {
         String actualHomePage = WebDriverUtils.driver.getCurrentUrl();
         Assert.assertEquals(actualHomePage, url);
-        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 }
