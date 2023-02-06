@@ -13,6 +13,8 @@ public class LoginStepDefinitions extends PageInitializer {
     @Given("a Chroma Tech Academy teacher or admin is on login page {string}")
     public void a_Chroma_Tech_Academy_teacher_or_admin_is_on_login_page(String url) {
         WebDriverUtils.driver.get(url);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @When("user logs in with valid credentials username {string} and password {string}")
@@ -20,6 +22,8 @@ public class LoginStepDefinitions extends PageInitializer {
             throws InterruptedException {
         loginPage.usernameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
         loginPage.signInButton.click();
         Thread.sleep(2000);
     }
