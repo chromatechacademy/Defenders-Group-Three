@@ -1,5 +1,6 @@
 package com.chroma.appsCommon;
 
+import com.chroma.pages.AddMultipleStudentsPage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.DisableStudentPage;
 import com.chroma.pages.IncomeModulePage;
@@ -14,13 +15,15 @@ public class PageInitializer extends WebDriverUtils {
     public static IncomeModulePage incomeModulePage;
     public static StudentAdmissionPage studentAdmissionPage;
     public static DisableStudentPage disableStudentPage;
-    
+    public static AddMultipleStudentsPage addMultipleStudentsPage;
+
     public void initializeAllPages() {
         dashboardPage = new DashboardPage();
         realEstateLoginPage = new RealEstateLoginPage();
         incomeModulePage = new IncomeModulePage();
         studentAdmissionPage = new StudentAdmissionPage();
         disableStudentPage = new DisableStudentPage();
+        addMultipleStudentsPage = new AddMultipleStudentsPage();
     }
 }
 
