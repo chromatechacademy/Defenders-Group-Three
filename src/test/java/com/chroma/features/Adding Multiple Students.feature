@@ -1,6 +1,6 @@
 Feature: Adding Multiple Students Scenario
 
-  #@CTSMSProgression @Geraldine @DFNDRS-19
+  @CTSMSRegression @Geraldine @DFNDRS-19
   Scenario Outline: Adding multiple students
     Given a Chroma Tech Academy teacher or admin is on login page "https://mexil.it/chroma_tech_academy/dev/site/login"
     When user logs in with valid credentials username "general@teacher.com" and password "123456"
@@ -8,9 +8,9 @@ Feature: Adding Multiple Students Scenario
     When user navigates to Student Information Module
     And navigates to Student Admission Submodule
     Then user enters unique Student Admission Number "<ADMISSION NUMBER>"
-    And enters Students first name "<FIRST NAME>"  
+    And enters Students first name "<FIRST NAME>"
     And enters last name "<LAST NAME>"
-    And selects class "<CLASS>" 
+    And selects class "<CLASS>"
     And selects section "<SECTION>"
     Then user selects gender "<GENDER>"
     And user enters DOB "<DOB>"
@@ -21,6 +21,6 @@ Feature: Adding Multiple Students Scenario
 
     Examples: 
       | ADMISSION NUMBER | CLASS | SECTION              | FIRST NAME | LAST NAME | GENDER | DOB        | MOTHERS NAME | GUARDIAN PHONE NUMBER |
-      |         76538959 | SDET  | Testing Fundamentals | JANE       | TEST      | Female | 11/02/1995 | MOM          |            2023369795 |
-      |         51233445 | SDET  | Testing Fundamentals | ROB        | TEST      | Male   | 03/10/1990 | MOM          |            7036871234 |
-      |         12356745 | SDET  | Testing Fundamentals | NAME       | TEST      | Male   | 03/10/1995 | MOM          |            7036871234 |
+      |         76538959 | SDET  | Testing Fundamentals | Test       | Test      | Female | 11/02/1995 | MOM          |            2023369795 |
+      |         51233445 | SDET  | Testing Fundamentals | Rob        | Test      | Male   | 03/10/1990 | MOM          |            7036871234 |
+      |         12356745 | SDET  | Testing Fundamentals | Name       | Test      | Male   | 03/10/1995 | MOM          |            7036871234 |

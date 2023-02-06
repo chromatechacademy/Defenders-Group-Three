@@ -1,6 +1,6 @@
 Feature: Creating a New Agent Scenario
 
-  @Geraldine @Progression @DFNDRS-45
+  #@Geraldine @Progression @DFNDRS-45
   Scenario Outline: Creating New Agent with Unique Name
     Given an admin or student user is on login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
     When admin or student user logs in with valid credentials email "admin@mexil.it" and password "123456"

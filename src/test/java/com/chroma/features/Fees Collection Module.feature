@@ -5,7 +5,7 @@ Feature: Fees Collecton Submodules Test Scenarios
     Given a Chroma Tech Academy teacher or admin is on login page "https://mexil.it/chroma_tech_academy/dev/site/login"
     When user logs in with valid credentials username "general@teacher.com" and password "123456"
     Then user is on dashboard page "https://mexil.it/chroma_tech_academy/dev/admin/admin/dashboard"
-    When user clicks on "Fees Collection" Module 
+    When user clicks on "Fees Collection" Module
     Then Collect Fees Submodule is displayed with the text "Collect Fees"
     And Search Fees Payment Submodule is displayed with the text "Search Fees Payment"
     And Search Due Fees Submodule is displayed with the text "Search Due Fees"
