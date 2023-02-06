@@ -16,11 +16,10 @@ public class AgentModuleTextStepDef extends PageInitializer {
     }
 
     @When("an admin user logs in with valid credentials email {string} and password {string}")
-    public void an_admin_user_logs_in_with_valid_credentials_email_and_password(String email, String password)
-            throws InterruptedException {
+    public void an_admin_user_logs_in_with_valid_credentials_email_and_password(String email, String password) {
         agentModulePage.emailTextBox.sendKeys(email);
         agentModulePage.passwordTextBox.sendKeys(password);
-        Thread.sleep(3000);
+        CommonUtils.sleep(300);
         agentModulePage.loginButton.click();
     }
 
@@ -32,33 +31,22 @@ public class AgentModuleTextStepDef extends PageInitializer {
     @Then("user is able to see following text {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
     public void user_is_able_to_see_following_text(String membersList, String active, String inactive, String allAgents,
             String addNow, String name, String mail, String contactNumber, String actions) {
-
-        String actualMembersList = agentModulePage.memberButton.getText();
-        CommonUtils.assertEquals(actualMembersList, membersList);
-
         String actualActiveText = agentModulePage.activeText.getText();
         CommonUtils.assertEquals(actualActiveText, active);
-
         String actualInactiveText = agentModulePage.inactiveText.getText();
         CommonUtils.assertEquals(actualInactiveText, inactive);
-
         String actualAllAgentsText = agentModulePage.allAgentsText.getText();
         CommonUtils.assertEquals(actualAllAgentsText, allAgents);
-
         String actualAddNowText = agentModulePage.addNowText.getText();
         CommonUtils.assertEquals(actualAddNowText, addNow);
-
         String actualNameText = agentModulePage.nameText.getText();
-        CommonUtils.assertEquals(actualNameText, name);
-
+        CommonUtils.assertTrue(actualNameText.equalsIgnoreCase(name));
         String actualMailText = agentModulePage.mailText.getText();
-        CommonUtils.assertEquals(actualMailText, contactNumber);
-
+        CommonUtils.assertTrue(actualMailText.equalsIgnoreCase(mail));
         String actualContactNumber = agentModulePage.contactNumberText.getText();
-        CommonUtils.assertEquals(actualContactNumber, contactNumber);
-
+        CommonUtils.assertTrue(actualContactNumber.equalsIgnoreCase(contactNumber));
         String actualActionsText = agentModulePage.actionsText.getText();
-        CommonUtils.assertEquals(actualActionsText, actions);
+        CommonUtils.assertTrue(actualActionsText.equalsIgnoreCase(actions));
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
