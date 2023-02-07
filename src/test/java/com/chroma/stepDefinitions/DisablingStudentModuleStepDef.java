@@ -9,7 +9,7 @@ public class DisablingStudentModuleStepDef extends PageInitializer {
 
     @Then("navigates to Student Information Module")
     public void navigates_to_Student_Information_Module() {
-        DisableStudentPage.studentInformationModule.click();
+        disableStudentPage.studentInformationModule.click();
     }
 
     @Then("navigates to Student Details Sub Module")
@@ -46,7 +46,33 @@ public class DisablingStudentModuleStepDef extends PageInitializer {
 
     @Then("clicks OK on the pop up alert")
     public void clicks_OK_on_the_pop_up_alert() {
-        
+        CommonUtils.acceptAlert();
+    }
+
+    @Then("selects {string} in the Reason drop down menu")
+    public void selects_in_the_Reason_drop_down_menu(String testDisableReason) {
+        CommonUtils.selectDropDownValue(testDisableReason, disableStudentPage.disableReasonDropDown);
+    }
+
+    @Then("user clicks save button")
+    public void user_clicks_save_button() {
+        disableStudentPage.saveButton.click();
+    }
+
+    @Then("user navigates to Disabled Students Sub Module")
+    public void user_navigates_to_Disabled_Students_Sub_Module() {
+        disableStudentPage.disabledStudentSubModule.click();
+    }
+
+    @Then("selects Class {string} and section {string}")
+    public void selects_Class_and_section(String className, String sectionName) {
+        CommonUtils.selectDropDownValue(className, studentAdmissionPage.classDropdown);
+        CommonUtils.selectDropDownValue(sectionName, studentAdmissionPage.sectionDropDown);
+    }
+
+    @Then("user clicks search button")
+    public void user_clicks_search_button() {
+        disableStudentPage.searchButton.click();
     }
 
 }
