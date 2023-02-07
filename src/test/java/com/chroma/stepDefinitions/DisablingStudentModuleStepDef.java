@@ -36,21 +36,22 @@ public class DisablingStudentModuleStepDef extends PageInitializer {
     }
 
     @Then("clicks the red thumbs down icon in the upper right corner")
-    public void clicks_the_red_thumbs_down_icon_in_the_upper_right_corner() throws InterruptedException {
+    public void clicks_the_red_thumbs_down_icon_in_the_upper_right_corner() {
         disableStudentPage.redThumbsDownIcon.click();
-        Thread.sleep(3000);
+        CommonUtils.sleep(2000);
     }
 
     @Then("clicks OK on the pop up alert")
     public void clicks_OK_on_the_pop_up_alert() {
         CommonUtils.acceptAlert();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("selects {string} in the Reason drop down menu")
     public void selects_in_the_Reason_drop_down_menu(String testDisableReason) {
         CommonUtils.waitForClickability(disableStudentPage.disableReasonDropDown);
         CommonUtils.selectDropDownValue(testDisableReason, disableStudentPage.disableReasonDropDown);
-
     }
 
     @Then("user clicks save button")
@@ -62,6 +63,8 @@ public class DisablingStudentModuleStepDef extends PageInitializer {
     @Then("user navigates to Disabled Students Sub Module")
     public void user_navigates_to_Disabled_Students_Sub_Module() {
         disableStudentPage.disabledStudentSubModule.click();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @Then("selects Class {string} and section {string}")

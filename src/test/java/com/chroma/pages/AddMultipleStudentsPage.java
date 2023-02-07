@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.chroma.web.WebDriverUtils;
 
 public class AddMultipleStudentsPage {
+    
     /* ADMISSION NUMBER */
     @FindBy(xpath = "//input[@id='admission_no']")
     public WebElement admissionNumberTextBox;

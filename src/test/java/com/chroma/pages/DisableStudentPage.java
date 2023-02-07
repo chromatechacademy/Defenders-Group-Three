@@ -53,6 +53,5 @@ public class DisableStudentPage {
 
     public DisableStudentPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
-
     }
 }

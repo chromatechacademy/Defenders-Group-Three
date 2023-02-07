@@ -23,6 +23,8 @@ public class RealEstateCreateAgentStepDef extends PageInitializer {
         RealEstateLoginPage.passwordTextbox.sendKeys(password);
         RealEstateLoginPage.loginButton.click();
         CommonUtils.sleep(2000);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @When("verifies a unique agent has been added wih {string}, {string}, {string}, {string}, {string}")
@@ -64,6 +66,8 @@ public class RealEstateCreateAgentStepDef extends PageInitializer {
     public void admin_logs_out_the_admin_site() {
         realEstateAgentsPage.accountButton.click();
         realEstateAgentsPage.logoutButton.click();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
     @When("user logs in with valid username and password {string} {string}")
@@ -79,5 +83,7 @@ public class RealEstateCreateAgentStepDef extends PageInitializer {
         String actualHeaderText = realEstateAgentsPage.greetingPage.getText();
         CommonUtils.assertEquals(expectedHelloName, actualHeaderText);
         CommonUtils.sleep(2000);
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 }
