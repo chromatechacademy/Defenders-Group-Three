@@ -28,7 +28,7 @@ public class DisableStudentPage {
     public WebElement searchButton;
 
     /* Student Name */
-    @FindBy(xpath = "(//a[contains(text(),'Yuliana Kuziv')])[1]")
+    @FindBy(xpath = "//tr[@role='row']//a[contains(text(),'Will Smith')]")
     public WebElement studentName;
 
     /* Red thumbs down icon */
@@ -36,17 +36,20 @@ public class DisableStudentPage {
     public WebElement redThumbsDownIcon;
 
     /* Disable Reason Dropdown */
-    @FindBy(xpath = "//select[@name='reason']")
+    @FindBy(xpath = "//*[@name='reason']")
     public WebElement disableReasonDropDown;
-    
+
     /* Save Button */
-    @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
+    @FindBy(xpath = "(//*[contains(text(),'Save')])[3]")
     public WebElement saveButton;
 
     /* Disabled Student SubModule */
-    @FindBy(xpath = "//a[normalize-space()='Disabled Students']")
+    @FindBy(xpath = "//*[@data-original-title='Disable']")
     public WebElement disabledStudentSubModule;
 
+    /* Enable */
+    @FindBy(xpath = "//*[@class='fa fa-thumbs-o-up']")
+    public WebElement enableStudentSubModule;
 
     public DisableStudentPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

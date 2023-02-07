@@ -14,21 +14,21 @@ public class AddMultipleStudentsPage {
     @FindBy(xpath = "//input[@id='firstname']")
     public WebElement firstNameTextBox;
 
-     /* LAST NAME TEXT BOX */
-     @FindBy(xpath = "//input[@id='lastname']")
-     public WebElement lastNameTextBox;
+    /* LAST NAME TEXT BOX */
+    @FindBy(xpath = "//input[@id='lastname']")
+    public WebElement lastNameTextBox;
 
     /* GENDER DROPDOWN MENU */
     @FindBy(xpath = "//select[@name='gender']")
     public WebElement genderDropDownMenu;
 
-    /*CLASS DROPDOWN MENU */
+    /* CLASS DROPDOWN MENU */
     @FindBy(xpath = "//select[@id='class_id']")
     public WebElement classDropDownMenu;
 
-     /* SECTION DROPDOWN MENU */
-     @FindBy(xpath = "//select[@id='section_id']")
-     public WebElement sectionDropDownMenu;
+    /* SECTION DROPDOWN MENU */
+    @FindBy(xpath = "//select[@id='section_id']")
+    public WebElement sectionDropDownMenu;
 
     /* GUARDIAN RADIO BUTTON */
     @FindBy(xpath = "//input[@value='father']")
