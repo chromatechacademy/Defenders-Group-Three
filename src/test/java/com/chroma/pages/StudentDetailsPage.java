@@ -3,7 +3,6 @@ package com.chroma.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.chroma.web.WebDriverUtils;
 
 public class StudentDetailsPage {
@@ -24,6 +23,10 @@ public class StudentDetailsPage {
     @FindBy(xpath = "(//a[@class='btn btn-default btn-xs'])[2]")
     public WebElement editButton;
 
+    /* section dropdown */
+    @FindBy(xpath = "//select[@id='section_id']")
+    public WebElement sectionDropdown;
+
     /* blood group dropdown */
     @FindBy(xpath = "//select[@name='blood_group']")
     public WebElement bloodGroupDropdown;
@@ -31,6 +34,10 @@ public class StudentDetailsPage {
     /* save edits button */
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveEditsButton;
+
+    /* successful edit message */
+    @FindBy(xpath = "//div[@class='alert alert-success']")
+    public WebElement successfulEditMessage;
 
     public StudentDetailsPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

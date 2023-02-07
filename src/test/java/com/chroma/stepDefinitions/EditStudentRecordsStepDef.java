@@ -24,9 +24,11 @@ public class EditStudentRecordsStepDef extends PageInitializer {
         studentDetailsPage.editButton.click();
     }
 
-    @When("user selects blood group {string} from Blood Group dropdown")
-    public void user_selects_blood_group_from_Blood_Group_dropdown(String bloodGroup) {
-        CommonUtils.selectDropDownValue(studentDetailsPage.bloodGroupDropdown, 1);
+    @When("user selects section {string} from Section dropdown and blood group {string} from Blood Group dropdown")
+    public void user_selects_section_from_Section_dropdown_and_blood_group_from_Blood_Group_dropdown(String sectionName,
+            String bloodGroup) {
+        CommonUtils.selectDropDownValue(sectionName, studentDetailsPage.sectionDropdown);
+        CommonUtils.selectDropDownValue(bloodGroup, studentDetailsPage.bloodGroupDropdown);
     }
 
     @When("clicks save button")
@@ -34,10 +36,10 @@ public class EditStudentRecordsStepDef extends PageInitializer {
         studentDetailsPage.saveEditsButton.click();
     }
 
-    @Then("{string} alert should be displayed")
-    public void alert_should_be_displayed(String expectedSuccessAlertText) {
-        String actualSuccessAlertText = CommonUtils.getAlertText();
-        CommonUtils.assertEquals(actualSuccessAlertText, expectedSuccessAlertText);
+    @Then("{string} message should be displayed")
+    public void message_should_be_displayed(String expectedSuccessMessageText) {
+        String actualSuccessMessage = studentDetailsPage.successfulEditMessage.getText();
+        CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessageText);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }
