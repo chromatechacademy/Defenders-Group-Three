@@ -9,6 +9,7 @@ import com.chroma.pages.RealEstateLoginPage;
 import com.chroma.pages.RealEstateProjectsPage;
 import com.chroma.pages.SamplePage;
 import com.chroma.pages.StudentAdmissionPage;
+import com.chroma.pages.StudentDetailsPage;
 import com.chroma.web.WebDriverUtils;
 
 public class PageInitializer extends WebDriverUtils {
@@ -20,6 +21,7 @@ public class PageInitializer extends WebDriverUtils {
     public static LoginPage loginPage;
     public static StudentAdmissionPage studentAdmissionPage;
     public static AgentModulePage agentModulePage;
+    public static StudentDetailsPage studentDetailsPage;
     public static NewProjectPage newProjectPage;
 
     public void initializeAllPages() {
@@ -30,6 +32,7 @@ public class PageInitializer extends WebDriverUtils {
         loginPage = new LoginPage();
         studentAdmissionPage = new StudentAdmissionPage();
         agentModulePage = new AgentModulePage();
+        studentDetailsPage = new StudentDetailsPage();
         newProjectPage = new NewProjectPage();
     }
 }
