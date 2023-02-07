@@ -7,6 +7,6 @@ Feature: Real Estate Page Login Test Scenarios
     Then admin or student user should be on dashboard page "<DASHBOARD URL>"
 
     Examples: 
-      | URL                                                                                   | EMAIL                 | PASSWORD | DASHBOARD URL |
+      | URL                                                                                   | EMAIL                 | PASSWORD | DASHBOARD URL                                                                         |
       | https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php | admin@mexil.it        |   123456 | https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/index.php |
-      | https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php       | chroma@chromatech.com |   123456 | https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/index.php |
+      | https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/login.php       | chroma@chromatech.com |   123456 | https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/index.php       |
