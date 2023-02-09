@@ -11,5 +11,5 @@ Feature: Create a New Project Scenarios
         And enters street name "Holly Ln"
         And enters suburb name "Arlington Heights"
         And clicks next button
-        And clicks save button
+        And click save button
         Then project is added and confirmation message is displaying "New Project has been added!"
