@@ -45,8 +45,8 @@ public class NewProjectStepDef extends PageInitializer {
         newProjectPage.nextButton.click();
     }
 
-    @When("clicks save button")
-    public void clicks_save_button() {
+    @When("click save button")
+    public void click_save_button() {
         newProjectPage.saveButton.click();
     }
 
