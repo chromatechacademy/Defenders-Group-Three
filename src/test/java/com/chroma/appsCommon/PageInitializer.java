@@ -4,6 +4,7 @@ import com.chroma.pages.AddMultipleStudentsPage;
 import com.chroma.pages.AgentModulePage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.DisableStudentPage;
+import com.chroma.pages.HomeworkPage;
 import com.chroma.pages.IncomeModulePage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.RealEstateAgentsPage;
@@ -26,6 +27,7 @@ public class PageInitializer extends WebDriverUtils {
     public static RealEstateAgentsPage realEstateAgentsPage;
     public static StudentDetailsPage studentDetailsPage;
     public static NewProjectPage newProjectPage;
+    public static HomeworkPage homeworkPage;
 
     public void initializeAllPages() {
         dashboardPage = new DashboardPage();
@@ -39,5 +41,6 @@ public class PageInitializer extends WebDriverUtils {
         realEstateAgentsPage = new RealEstateAgentsPage();
         studentDetailsPage = new StudentDetailsPage();
         newProjectPage = new NewProjectPage();
+        homeworkPage = new HomeworkPage();
     }
 }

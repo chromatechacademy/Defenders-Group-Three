@@ -10,6 +10,7 @@ public class HomeworkModuleStepDefinitions extends PageInitializer {
 
     @Then("user clicks the homework dropdown on dashboard page")
 public void user_clicks_the_homework_dropdown_on_dashboard_page() {
+    CommonUtils.sleep(2000);
     HomeworkPage.homeworkPageModule.click();
     CucumberLogUtils.logScreenShot();
     CucumberLogUtils.logExtentScreenshot();
