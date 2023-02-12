@@ -4,11 +4,14 @@ import com.chroma.pages.AddMultipleStudentsPage;
 import com.chroma.pages.AgentModulePage;
 import com.chroma.pages.DashboardPage;
 import com.chroma.pages.DisableStudentPage;
+import com.chroma.pages.HomeworkPage;
 import com.chroma.pages.IncomeModulePage;
 import com.chroma.pages.LoginPage;
 import com.chroma.pages.RealEstateAgentsPage;
+import com.chroma.pages.RealEstateDashboardPage;
 import com.chroma.pages.NewProjectPage;
 import com.chroma.pages.RealEstateLoginPage;
+import com.chroma.pages.RealEstateProjectsPage;
 import com.chroma.pages.StudentAdmissionPage;
 import com.chroma.pages.StudentDetailsPage;
 import com.chroma.web.WebDriverUtils;
@@ -26,6 +29,9 @@ public class PageInitializer extends WebDriverUtils {
     public static RealEstateAgentsPage realEstateAgentsPage;
     public static StudentDetailsPage studentDetailsPage;
     public static NewProjectPage newProjectPage;
+    public static HomeworkPage homeworkPage;
+    public static RealEstateDashboardPage realEstateDashboardPage;
+    public static RealEstateProjectsPage realEstateProjectsPage;
 
     public void initializeAllPages() {
         dashboardPage = new DashboardPage();
@@ -39,5 +45,8 @@ public class PageInitializer extends WebDriverUtils {
         realEstateAgentsPage = new RealEstateAgentsPage();
         studentDetailsPage = new StudentDetailsPage();
         newProjectPage = new NewProjectPage();
+        homeworkPage = new HomeworkPage();
+        realEstateDashboardPage = new RealEstateDashboardPage();
+        realEstateProjectsPage = new RealEstateProjectsPage();
     }
 }
