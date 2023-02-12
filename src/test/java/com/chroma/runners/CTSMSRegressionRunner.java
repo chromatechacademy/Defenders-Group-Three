@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/java/com/chroma/features", 
 		glue = "com.chroma.stepDefinitions", 
 		tags = "@CTSMSRegression",
-		dryRun = true, 
+		dryRun = false, 
 		monochrome = true, 
 		strict = true
 ) 
