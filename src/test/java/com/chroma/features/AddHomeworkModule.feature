@@ -1,6 +1,6 @@
 Feature: Add Homework Module
 
-    @CTSMSProgression @CHRIS @USID-10
+    @CTSMSRegression @CHRIS @USID-10
 
     Scenario: Inspection Of Add Homework Module Link
         Given a Chroma Tech Academy teacher or admin is on login page "https://mexil.it/chroma_tech_academy/dev/site/login"
