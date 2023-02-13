@@ -98,13 +98,13 @@ public class WebDriverUtils {
                 MutableCapabilities caps = new MutableCapabilities();
                 caps.setCapability("platformName", "iOS");
                 caps.setCapability("browserName", "Safari");
-                caps.setCapability("appium:deviceName", "iPhone 13 Simulator");
+                caps.setCapability("appium:deviceName", "iPhone 13 Pro Simulator");
                 caps.setCapability("appium:platformVersion", "16.1");
                 caps.setCapability("appium:automationName", "XCUITest");
                 MutableCapabilities sauceOptions = new MutableCapabilities();
                 sauceOptions.setCapability("appiumVersion", "2.0.0");
-                sauceOptions.setCapability("build", "<your build id>");
-                sauceOptions.setCapability("name", "<your test name>");
+                sauceOptions.setCapability("build", "2.1.4");
+                sauceOptions.setCapability("name", "DCJavaGuy");
                 caps.setCapability("sauce:options", sauceOptions);
                 try {
                     driver = new IOSDriver(new URL(ConfigReader.getPropertyValue("sauceUrl")), caps);
