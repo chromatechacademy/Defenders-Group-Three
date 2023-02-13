@@ -8,7 +8,7 @@ Feature: Disabling a Student Module Scenario
     And navigates to Student Details Sub Module
     And Selects Class "SDET" and Section "Testing Fundamentals"
     And clicks search button
-    And clicks on student name "Will Smith"
+    And clicks on student name "Kevin Test"
     And clicks the red thumbs down icon in the upper right corner
     And clicks OK on the pop up alert
     And selects "TestDisableReason" in the Reason drop down menu
