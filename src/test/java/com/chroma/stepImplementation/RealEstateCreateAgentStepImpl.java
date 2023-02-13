@@ -32,7 +32,6 @@ public class RealEstateCreateAgentStepImpl extends PageInitializer {
         realEstateAgentsPage.backButton.click();
         WebDriverUtils.driver.navigate().refresh();
         CommonUtils.nonMobileScreenshots();
-
     }
 
     public static void agentEmail(String expectedAgentEmail) {
