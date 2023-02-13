@@ -1,10 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.pages.RealEstateLoginPage;
-import com.chroma.utils.CucumberLogUtils;
-import com.chroma.web.CommonUtils;
-import com.chroma.web.JavascriptUtils;
+import com.chroma.stepImplementation.RealEstateLoginStepImpl;
 import com.chroma.web.WebDriverUtils;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,19 +16,11 @@ public class RealEstateLoginStepDef extends PageInitializer {
 
     @When("admin or student user logs in with valid credentials email {string} and password {string}")
     public void admin_or_student_user_logs_in_with_valid_credentials_email_and_password(String email, String password) {
-        RealEstateLoginPage.emailTextbox.sendKeys(email);
-        RealEstateLoginPage.passwordTextbox.sendKeys(password);
-        JavascriptUtils.scrollIntoView(RealEstateLoginPage.loginButton);
-        CommonUtils.sleep(2000);
-        RealEstateLoginPage.loginButton.click();
+        RealEstateLoginStepImpl.logginIn(email, password);
     }
 
     @Then("admin or student user should be on dashboard page {string}")
     public void admin_or_student_user_should_be_on_dashboard_page(String expectedRealEstateDashboardUrl) {
-        CommonUtils.sleep(3000);
-        String actualRealEstateDashboardUrl = WebDriverUtils.driver.getCurrentUrl();
-        CommonUtils.assertEquals(actualRealEstateDashboardUrl, expectedRealEstateDashboardUrl);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        RealEstateLoginStepImpl.dashboardPageAssertion(expectedRealEstateDashboardUrl);
     }
 }

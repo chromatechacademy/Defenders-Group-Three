@@ -1,8 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
-import com.chroma.web.CommonUtils;
+import com.chroma.stepImplementation.NewProjectStepImpl;
 import com.chroma.web.JavascriptUtils;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -52,9 +51,6 @@ public class NewProjectStepDef extends PageInitializer {
 
     @Then("project is added and confirmation message is displaying {string}")
     public void project_is_added_and_confirmation_message_is_displaying(String confirmationMsg) {
-        String actualConfirmationMessage = newProjectPage.confirmationMessage.getText();
-        CommonUtils.assertEquals(actualConfirmationMessage, confirmationMsg);
-        CucumberLogUtils.logExtentScreenshot();
-        CucumberLogUtils.logScreenShot();
+        NewProjectStepImpl.confirmationMessageAssertion(confirmationMsg);
     }
 }
