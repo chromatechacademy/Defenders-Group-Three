@@ -1,7 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
+import com.chroma.stepImplementation.AddingMultipleStudentsStepImpl;
 import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Then;
 
@@ -59,8 +59,6 @@ public class AddingMultipleStudentsStepDef extends PageInitializer {
 
     @Then("user clicks on save button")
     public void user_clicks_on_save_button() {
-        addMultipleStudentsPage.saveButton.click();
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        AddingMultipleStudentsStepImpl.saveButton();
     }
 }

@@ -1,7 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
+import com.chroma.stepImplementation.StudentAdmissionStepImpl;
 import com.chroma.web.CommonUtils;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -25,14 +25,12 @@ public class StudentAdmissionStepDef extends PageInitializer {
 
     @When("enters Students first name {string} and last name {string}")
     public void enters_Students_first_name_and_last_name(String firstName, String lastName) {
-        studentAdmissionPage.firstName.sendKeys(firstName);
-        studentAdmissionPage.lastName.sendKeys(lastName);
+        StudentAdmissionStepImpl.StudentsFirstNameAndLastName(firstName, lastName);
     }
 
     @When("selects class {string} and section {string}")
     public void selects_class_and_section(String className, String sectionName) {
-        CommonUtils.selectDropDownValue(className, studentAdmissionPage.classDropdown);
-        CommonUtils.selectDropDownValue(sectionName, studentAdmissionPage.sectionDropDown);
+        StudentAdmissionStepImpl.classAndSectionDropDowns(className, sectionName);
     }
 
     @When("selects gender {string}")
@@ -51,8 +49,8 @@ public class StudentAdmissionStepDef extends PageInitializer {
     }
 
     @When("for Parent Guardian Details enters mothers name {string}")
-    public void for_Parent_Guardian_Details_enters_mothers_name(String mothersName) throws InterruptedException {
-       studentAdmissionPage.guardianNameTextBox.sendKeys(mothersName);
+    public void for_Parent_Guardian_Details_enters_mothers_name(String mothersName) {
+        studentAdmissionPage.guardianNameTextBox.sendKeys(mothersName);
     }
 
     @When("for Guardian Phone enters {string}")
@@ -61,15 +59,12 @@ public class StudentAdmissionStepDef extends PageInitializer {
     }
 
     @When("clicks on save button")
-    public void clicks_on_save_button() throws InterruptedException {
+    public void clicks_on_save_button() {
         studentAdmissionPage.saveButton.click();
     }
 
     @Then("student is succesfully saved and confirmation message is displaying {string}")
-    public void student_is_succesfully_saved_and_confirmation_message_is_displaying(String confirmationMessage) throws InterruptedException {
-        String actualConfirmationMessage = studentAdmissionPage.confirmationMessage.getText();
-        CommonUtils.assertEquals(actualConfirmationMessage, confirmationMessage);
-        CucumberLogUtils.logExtentScreenshot();
-        CucumberLogUtils.logScreenShot();
+    public void student_is_succesfully_saved_and_confirmation_message_is_displaying(String confirmationMessage) {
+        StudentAdmissionStepImpl.confirmationMessageAssertion(confirmationMessage);
     }
 }

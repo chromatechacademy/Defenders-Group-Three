@@ -1,8 +1,7 @@
 package com.chroma.stepDefinitions;
 
 import com.chroma.appsCommon.PageInitializer;
-import com.chroma.utils.CucumberLogUtils;
-import com.chroma.web.CommonUtils;
+import com.chroma.stepImplementation.EditStudentRecordsStepImpl;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -15,8 +14,7 @@ public class EditStudentRecordsStepDef extends PageInitializer {
 
     @When("user selects {string} from Class dropdown and clicks search button")
     public void user_selects_from_Class_dropdown_and_clicks_search_button(String className) {
-        CommonUtils.selectDropDownValue(className, studentDetailsPage.classDropdown);
-        studentDetailsPage.searchButton.click();
+        EditStudentRecordsStepImpl.classDropdownAndSearchButton(className);
     }
 
     @When("user clicks edit button")
@@ -27,8 +25,7 @@ public class EditStudentRecordsStepDef extends PageInitializer {
     @When("user selects section {string} from Section dropdown and blood group {string} from Blood Group dropdown")
     public void user_selects_section_from_Section_dropdown_and_blood_group_from_Blood_Group_dropdown(String sectionName,
             String bloodGroup) {
-        CommonUtils.selectDropDownValue(sectionName, studentDetailsPage.sectionDropdown);
-        CommonUtils.selectDropDownValue(bloodGroup, studentDetailsPage.bloodGroupDropdown);
+        EditStudentRecordsStepImpl.selectSectionAndBloodGroup(sectionName, bloodGroup);
     }
 
     @When("clicks save button")
@@ -38,9 +35,6 @@ public class EditStudentRecordsStepDef extends PageInitializer {
 
     @Then("{string} message should be displayed")
     public void message_should_be_displayed(String expectedSuccessMessageText) {
-        String actualSuccessMessage = studentDetailsPage.successfulEditMessage.getText();
-        CommonUtils.assertEquals(actualSuccessMessage, expectedSuccessMessageText);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        EditStudentRecordsStepImpl.messageTextAssertion(expectedSuccessMessageText);
     }
 }
