@@ -1,6 +1,6 @@
 Feature: Creating New Agent
 
-  @RERegression @Geraldine @DFNDRS-45
+  @RERegression @Geraldine @DFNDRS-45 @RESmoke
   Scenario: Creating a new agent
     Given an admin user is on the Real Estate login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
     When user logs in with username and password "admin@mexil.it" "123456"
