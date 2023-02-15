@@ -1,6 +1,6 @@
 Feature: Edit Student Records Test Scenarios
 
-  @CTSMSRegression @Angelica @DFNDRS-14 @smoke
+  @CTSMSRegression @Angelica @DFNDRS-14 @CTSMSSmoke
   Scenario: Ability To Edit Student Records Test
     Given a Chroma Tech Academy teacher or admin is on login page "https://mexil.it/chroma_tech_academy/dev/site/login"
     When user logs in with valid credentials username "general@teacher.com" and password "123456"

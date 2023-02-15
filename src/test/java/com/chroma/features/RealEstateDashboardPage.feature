@@ -1,6 +1,6 @@
 Feature: Dashboard Page Elements
 
-    @RERegression @CHRIS @USID-42 @smoke
+    @RERegression @CHRIS @USID-42 @RESmoke
     Scenario Outline: Verify Dashboard Page Elements
         Given an admin or student user is on login page "<URL>"
         When admin or student user logs in with valid credentials email "<EMAIL>" and password "<PASSWORD>"
