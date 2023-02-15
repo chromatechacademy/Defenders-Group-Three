@@ -1,6 +1,6 @@
 Feature: Create a New Project Scenarios
 
-    @RERegression @Yuliana @DFNDRS-49
+    @RERegression @Yuliana @DFNDRS-49 @smoke
     Scenario: Create a New Project
         Given an admin user is on login page "https://chroma-tech-academy.mexil.it/chroma_real_estate/project_files/admin/login.php"
         When an admin user logs in with valid credentials email "admin@mexil.it" and password "123456"

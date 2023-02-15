@@ -1,6 +1,6 @@
 Feature: Real Estate Page Login Test Scenarios
 
- @RERegression @Angelica @DFNDRS-41
+ @RERegression @Angelica @DFNDRS-41 @smoke
   Scenario Outline: Real Estate Login Test
     Given an admin or student user is on login page "<URL>"
     When admin or student user logs in with valid credentials email "<EMAIL>" and password "<PASSWORD>"
